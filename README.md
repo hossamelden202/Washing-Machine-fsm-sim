@@ -71,9 +71,9 @@ Self-checking assertions automatically verify correct behavior at each stage. Th
 
 ## Implementation Files
 
-**washing_machine_controller.vhd** - Main design entity implementing the state machine, counter logic, and output generation.
+**washer_controller.vhdl** - Main design entity implementing the state machine, counter logic, and output generation.
 
-**washing_machine_tb.vhd** - Comprehensive testbench with automated verification and detailed reporting of test results.
+**tb_washer.vhdl** - Comprehensive testbench with automated verification and detailed reporting of test results.
 
 ## Simulation Instructions
 
