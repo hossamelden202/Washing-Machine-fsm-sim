@@ -77,34 +77,6 @@ Self-checking assertions automatically verify correct behavior at each stage. Th
 
 ## Simulation Instructions
 
-### Using GHDL (Recommended)
-
-GHDL is a free, open-source VHDL simulator that requires no licensing.
-
-**Installation:**
-```bash
-sudo apt-get install ghdl gtkwave
-```
-
-**Compilation and Simulation:**
-```bash
-# Compile design files
-ghdl -a washing_machine_controller.vhd
-ghdl -a washing_machine_tb.vhd
-
-# Elaborate testbench
-ghdl -e washing_machine_tb
-
-# Run simulation
-ghdl -r washing_machine_tb
-
-# Generate waveform file
-ghdl -r washing_machine_tb --vcd=waveform.vcd
-
-# View waveform
-gtkwave waveform.vcd
-```
-
 ### Using ModelSim/Questa
 
 If you have access to ModelSim or Questa with proper licensing:
@@ -123,8 +95,7 @@ This will automatically compile files, start simulation, add waveforms, and run 
 vlib work
 
 # Compile source files
-vcom washing_machine_controller.vhd
-vcom washing_machine_tb.vhd
+vcom *.vhdl
 
 # Run simulation (command line)
 vsim -c work.washing_machine_tb -do "run 15 sec; quit"
